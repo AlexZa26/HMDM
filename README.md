@@ -19,7 +19,10 @@ apt install -y aapt tomcat9 postgresql vim certbot unzip net-tools
 
 Версия Tomcat 9, устанавливаемая через apt в Ubuntu 20.04 (9.0.31) содержит баг, связанный с передачей файлов через HTTPS. Инсталлятор Headwind MDM предложит автоматически обновить Tomcat до нужной версии — не пропускайте этот шаг.
 На Ubuntu 24.04, пакет tomcat9 недоступен по умолчанию (Headwind MDM не совместим с Tomcat 10). Если установка не пройдет, выполните эту команду:
+
+```
 add-apt-repository -y -s "deb http://archive.ubuntu.com/ubuntu/ jammy main universe"
+```
 ## 2. Настройка базы данных
 ```
 su - postgres
